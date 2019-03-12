@@ -15,3 +15,15 @@
         pos1[msg.sender] = 5678;
       }
     }
+    
+    function mapLocation(uint256 slot, uint256 key) public pure returns (uint256) {
+        return uint256(keccak256(key, slot));
+    }
+    
+    function arrLocation(uint256 slot, uint256 index, uint256 elementSize)
+    public
+    pure
+    returns (uint256)
+    {
+        return uint256(keccak256(slot)) + (index * elementSize);
+    }
