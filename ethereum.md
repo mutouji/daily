@@ -37,3 +37,11 @@
 
     // then find arr[0]
     itemLoc = arrLocation(arrLoc, 0, 1);
+
+
+    Kind	            Declaration	    Value	    Location
+    Simple variable	        T v	        v	v's     slot
+    Fixed-size array	    T[10] v	    v[n]	    (v's slot) + n * (size of T)
+    Dynamic array	        T[] v	    v[n]	    keccak256(v's slot) + n * (size of T)
+                                        v.length	v's slot
+    Mapping	        mapping(T1 => T2) v	v[key]	    keccak256(key . (v's slot))
