@@ -76,9 +76,4 @@ shutdown -r now
 
 2、重新安装：安装方式没有什么区别只是有一点需注意 
 在设置语言支持的时候，
-	不需要安装fictx-ui-qimpanel，如图所示 
---------------------- 
-作者：xiaoxiaofengsun 
-来源：CSDN 
-原文：https://blog.csdn.net/xiaoxiaofengsun/article/details/82290700 
-版权声明：本文为博主原创文章，转载请附上博文链接！
+	不需要安装fictx-ui-qimpanel
