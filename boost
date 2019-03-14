@@ -1,0 +1,22 @@
+##编译 https://www.cnblogs.com/yaoyu126/p/10186910.html
+
+    bootstrap
+    .\b2
+第一个命令准备Boost.Build系统以供使用。第二个命令调用Boost.Build来构建单独编译的Boost库。有关允许的选项列表，请参阅Boost.Build文档
+
+##安装Boost.Build
+
+    转到目录tools\build\。
+    运行bootstrap.bat
+    运行b2 install --prefix=PREFIX, 其中PREFIX是您希望安装Boost.Build的目录
+    将PREFIX\bin添加到PATH环境变量中。
+    
+##安装代码
+
+    新建build_vs2017.bat，输入如下内容
+    
+    @ECHO OFF
+
+    ECHO Building Boost lib, vs2017
+
+    bjam.exe install --prefix="boost_1_67_vs2017" --toolset=msvc-14.1  link=static runtime-link=shared threading=multi debug release
